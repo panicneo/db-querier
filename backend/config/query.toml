@@ -1,0 +1,16 @@
+# 查询
+[[queries]]
+name = "order"                                          # 查询名称（唯一）
+database = "db1"                                        # 查询数据库
+sql = "SELECT * FROM `order` WHERE order_no = ?"        # SQL语句
+params = [                                              # 参数列表
+    {name = "order_no", type = "number"}                # name: 参数名称，type: 参数类型(number / string)
+]
+
+[[queries]]
+name = "order_detail"
+database = "db2"
+sql = "SELECT * FROM `order_detail` WHERE order_no = ?"
+params = [
+    {name = "order_no", type = "number"}
+]

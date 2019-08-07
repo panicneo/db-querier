@@ -1,0 +1,25 @@
+# 数据库查询超时时间
+query_timeout = "10s"
+
+[server]
+host = "0.0.0.0"
+port = "5000"
+
+# 数据库配置
+# dsn配置参照 https://github.com/go-sql-driver/mysql 如：
+[[databases]]
+name = "db1"
+dialect = "mysql"
+dsn = "root:root@tcp(localhost:3306)/db1?parseTime=true&readTimeout=5s&timeout=30s"
+
+[[databases]]
+name = "db2"
+dialect = "mysql"
+dsn = "root:root@tcp(localhost:3306)/db2"
+
+# 用户服务(待完善)
+# [[databases]]
+# name = "auth"
+# dialect = "mysql"
+# dsn = "root:root@tcp(localhost:3306)/auth"
+
